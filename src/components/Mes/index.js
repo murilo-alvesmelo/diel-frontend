@@ -68,7 +68,7 @@ export default class Mes extends Component{
                         <tbody className="tdbody">
                         {
                             this.state.tarefas.map(i => {
-                                const data = moment(i.estimatedAt).format("DD-MM-YYYY")
+                                const data = moment(i.estimatedAt).format("DD-MM-YYYY, h:mm a")
                                 return(
                                     <tr key={i.id}>
                                         <td>{i.id}</td>
@@ -97,7 +97,7 @@ export default class Mes extends Component{
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             <Form.Label>Data</Form.Label>
-                                            <Form.Control type="date" name="estimatedAt" onChange={(e) => this.setState({showDate: e.target.value})}/>
+                                            <Form.Control type="datetime-local" name="estimatedAt" onChange={(e) => this.setState({showDate: e.target.value})}/>
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             <Form.Label>Duração</Form.Label>

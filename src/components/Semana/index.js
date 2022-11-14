@@ -38,6 +38,7 @@ export default class Semana extends Component{
         }
     }
     update = async (id) =>{
+        console.log(this.state.showDuracao)
         try {
             await api.put(`/tasks/${id}`,{
                 desc: this.state.showDesc,
@@ -69,7 +70,7 @@ export default class Semana extends Component{
                         <tbody className="tdbody">
                         {
                             this.state.tarefas.map(i => {
-                                const data = moment(i.estimatedAt).format("DD-MM-YYYY")
+                                const data = moment(i.estimatedAt).format("DD-MM-YYYY, h:mm a")
                                 return(
                                     <tr key={i.id}>
                                         <td>{i.id}</td>
@@ -98,11 +99,11 @@ export default class Semana extends Component{
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             <Form.Label>Data</Form.Label>
-                                            <Form.Control type="date" name="estimatedAt" onChange={(e) => this.setState({showDate: e.target.value})}/>
+                                            <Form.Control type="datetime-local" name="estimatedAt" onChange={(e) => this.setState({showDate: e.target.value})}/>
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             <Form.Label>Duração</Form.Label>
-                                            <Form.Control type="time" name="duracao" onChange={(e) => this.setState({showDuracao: e.target.value})}/>
+                                            <Form.Control type="time" name="duracao" placeholder={this.state.showDuracao} onChange={(e) => this.setState({showDuracao: e.target.value})}/>
                                         </Form.Group>
                                         <Button variant="outline-primary" className="button" onClick={() => this.update(this.state.showId)}>Editar</Button>
                                         </Modal.Body>

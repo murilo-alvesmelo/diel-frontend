@@ -36,7 +36,7 @@ export default class Home extends React.Component{
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Data</Form.Label>
-                        <Form.Control type="date" name="estimatedAt" onChange={(e) => this.setState({estimatedAt: e.target.value})}/>
+                        <Form.Control type="datetime-local" name="estimatedAt" onChange={(e) => this.setState({estimatedAt: e.target.value})}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Duração</Form.Label>
