@@ -61,8 +61,8 @@ export default class Mes extends Component{
                             <th>#</th>
                             <th>Descrição</th>
                             <th>Data</th>
-                            <th>Ações</th>
                             <th>Duração</th>
+                            <th>Ações</th>
                         </tr>
                         </thead>
                         <tbody className="tdbody">
