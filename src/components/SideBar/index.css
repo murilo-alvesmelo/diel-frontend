@@ -18,3 +18,32 @@
     color: white;
     text-decoration: none;
 }
+
+@media all and (max-width: 450px){
+    .corpo{
+        display: flex;
+    }
+    .sidebar{
+        display: flex;
+        justify-content: center;
+        background-color: #1F1F1F;  
+        padding: 20px;
+        height: 250px;
+        width: 100vmin;
+    }
+    .sidebar-links{
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .icon{
+        margin: auto;
+    }
+    .link{
+        text-align: center;
+        margin: 10px;
+        color: white;
+        text-decoration: none;
+    }
+}

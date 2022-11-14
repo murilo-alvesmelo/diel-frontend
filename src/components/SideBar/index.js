@@ -8,7 +8,7 @@ export default class SideBar extends React.Component{
             <div className="corpo">
                 <div className="sidebar">
                     <div className="sidebar-links">
-                        <Link to={'/'}><IoIosAddCircleOutline size={40} color='white'/></Link>
+                        <Link to={'/'} className='icon'><IoIosAddCircleOutline size={40} color='white'/></Link>
                         <Link to={'/hoje'} className="link">Hoje</Link>
                         <Link to={'/semana'} className="link">Semana</Link>
                         <Link to={'/mes'} className="link">Mês</Link>

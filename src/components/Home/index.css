@@ -14,3 +14,23 @@
     display: flex;
     justify-content: center;
 }
+
+@media all and (max-width: 450px){
+    .corpo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .formContainer{
+        padding: 20px;
+        margin: 10px;
+    }
+    .form{
+        width: 300px;
+    }
+    .button{
+        display: flex;
+        margin: auto;
+        padding: 20px;
+    }
+    
+}

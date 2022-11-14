@@ -58,7 +58,6 @@ export default class Mes extends Component{
                     <Table striped bordered hover className="table">
                         <thead className="table-thead">
                         <tr>
-                            <th>#</th>
                             <th>Descrição</th>
                             <th>Data</th>
                             <th>Duração</th>
@@ -71,7 +70,6 @@ export default class Mes extends Component{
                                 const data = moment(i.estimatedAt).format("DD-MM-YYYY, h:mm a")
                                 return(
                                     <tr key={i.id}>
-                                        <td>{i.id}</td>
                                         <td>{i.desc}</td>
                                         <td>{data}</td>
                                         <td>{i.duracao.slice(0,5)}</td>

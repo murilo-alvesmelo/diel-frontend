@@ -23,3 +23,26 @@
 .table-thead{
     text-align: center;
 }
+
+@media all and (max-width: 450px){
+    .button{
+        font-size: 12px;
+        width: 50px;
+        margin: 1px;
+    }
+    .table{
+    }
+    .formContainer{
+        display: flex;
+        align-items: center;
+        box-shadow: 3px 3px 10px #1f1f1f8f;
+    }
+    .tdbody{
+        font-size: 14px;
+        text-align: center;
+    }
+    .table-thead{
+        font-size: 12px;
+        text-align: center;
+    }
+}
